@@ -4,7 +4,8 @@ class Controller_Welcome extends Controller {
 
 	public function action_index()
 	{
-		$this->response->body('This is the future home of Ninjaclip!');
+		$splash = View::factory('splash')->render();
+		$this->response->body($splash);
 	}
 
 } // End Welcome
